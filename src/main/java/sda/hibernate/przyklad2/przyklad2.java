@@ -22,6 +22,7 @@ public class przyklad2 {
         nowyUzytkownik.setNazwisko("persist");
         session.persist(nowyUzytkownik);
         session.flush();
+        System.out.println(nowyUzytkownik.getId());
         session.close();
             System.out.println("Dodano nowego uzytkownika, przy pomocy persist() o id=" + nowyUzytkownik.getId() + ", imie=" + nowyUzytkownik.getImie() + ", nazwisko=" + nowyUzytkownik.getNazwisko());
     }
@@ -34,6 +35,7 @@ public class przyklad2 {
         nowyUzytkownik.setNazwisko("merge");
         nowyUzytkownik = (Uzytkownik) session.merge(nowyUzytkownik);
         session.flush();
+        System.out.println(nowyUzytkownik.getId());
         session.close();
         System.out.println("Dodano nowego uzytkownika, przy pomocy merge() o id=" + nowyUzytkownik.getId() + ", imie=" + nowyUzytkownik.getImie() + ", nazwisko=" + nowyUzytkownik.getNazwisko());
         return nowyUzytkownik;
