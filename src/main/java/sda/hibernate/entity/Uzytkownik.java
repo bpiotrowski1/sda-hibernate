@@ -43,4 +43,8 @@ public class Uzytkownik {
     this.nazwisko = nazwisko;
   }
 
+  public Uzytkownik(String imie, String nazwisko) {
+    this.imie = imie;
+    this.nazwisko = nazwisko;
+  }
 }
