@@ -14,8 +14,8 @@ public class przyklad1 {
         Session session = HibernateUtil.getSessionFactory().openSession();
         session.beginTransaction();
         Uzytkownik nowyUzytkownik = session.find(Uzytkownik.class,39L); //nalezy podac id ktore jest w bazie, w przeciwnym razie bedzie NullPointerException
-        session.flush();
+        //session.flush();
         session.close();
-        System.out.println("Pobrano uzytkownika o id=" + nowyUzytkownik.getId() + ", imie=" + nowyUzytkownik.getImie() + ", nazwisko=" + nowyUzytkownik.getNazwisko());
+        System.out.println("Pobrano uzytkownika: " + nowyUzytkownik);
     }
 }
