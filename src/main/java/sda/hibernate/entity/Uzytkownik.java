@@ -1,5 +1,8 @@
 package sda.hibernate.entity;
 
+import lombok.Getter;
+import lombok.Setter;
+
 import javax.persistence.*;
 
 @Entity
@@ -9,38 +12,16 @@ public class Uzytkownik {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     @Column
+    @Getter @Setter
     private long id;
     @Column
+    @Getter @Setter
     private String imie;
     @Column
+    @Getter @Setter
     private String nazwisko;
 
     public Uzytkownik() {
-    }
-
-    public long getId() {
-        return id;
-    }
-
-    public void setId(long id) {
-        this.id = id;
-    }
-
-    public String getImie() {
-        return imie;
-    }
-
-    public void setImie(String imie) {
-        this.imie = imie;
-    }
-
-
-    public String getNazwisko() {
-        return nazwisko;
-    }
-
-    public void setNazwisko(String nazwisko) {
-        this.nazwisko = nazwisko;
     }
 
     public Uzytkownik(String imie, String nazwisko) {
