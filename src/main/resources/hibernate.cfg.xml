@@ -9,6 +9,6 @@
         <property name="hibernate.connection.password">Start123!</property>
         <property name="hibernate.show_sql">true</property>
         <property name="hibernate.dialect">org.hibernate.dialect.MySQL5Dialect</property>
-        <mapping class="sda.hibernate.entity.Uzytkownik"></mapping>
+        <mapping class="sda.hibernate.entity.Uzytkownik"/>
     </session-factory>
 </hibernate-configuration>
